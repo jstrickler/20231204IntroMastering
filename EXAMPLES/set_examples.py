@@ -1,4 +1,9 @@
 
+x= [5, 9, 5, 8, 9, 8, 5]
+x_set = set(x)
+print(f"x_set: {x_set}")
+
+
 set1 = {'red', 'blue', 'green', 'purple', 'green'}  # create literal set
 set2 = {'green', 'blue', 'yellow', 'orange'}
 
