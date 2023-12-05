@@ -15,3 +15,9 @@ print(f"info is {info} {info:d} {info:#b} {info:#x} {info:#o}")  # add prefixes
 print(f"${result:,d}")  # , adds commas to numeric value
 
 print(f"Length of 'name' is {len(name)}")  # function call OK
+
+print(f"2 + 2 = {2 + 2}")
+
+name = "Fred"
+
+print(f"name: {name}")
