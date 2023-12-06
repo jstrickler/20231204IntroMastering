@@ -11,3 +11,4 @@ for x, y in numpairs:
     else:
         total += quotient  # Only if no exceptions were raised
 print(total)
+

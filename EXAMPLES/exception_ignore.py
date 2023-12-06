@@ -7,4 +7,6 @@ try:
     print("Bottom of try")
 
 except(TypeError, IOError): # Catch exceptions, and do nothing
-    pass
+    pass 
+
+

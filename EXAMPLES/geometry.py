@@ -40,7 +40,19 @@ def square_area(side):
     """
     return side ** 2
 
+# script:
+#  python filename.py    __name__ set to "__main__"
+
+# module
+# (in a python script or module)
+# import filename    __name__ set to "filename"
+
+
+# __X__  
+
+
 if __name__ == "__main__":
+    print("HELLO FROM THE GEOMETRY MODULE!!!!")
     area1 = square_area(15)
     print(f"area1: {area1}")
     
@@ -49,3 +61,6 @@ if __name__ == "__main__":
     
     area3 = rectangle_area(9, 13)
     print(f"area3: {area3}")
+
+from pprint import pprint
+pprint(globals())

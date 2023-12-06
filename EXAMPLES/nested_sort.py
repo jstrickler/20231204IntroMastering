@@ -27,3 +27,20 @@ print('-' * 60)
 # sort by company
 for first_name, last_name, organization, dob in sorted(computer_people, key=lambda e: e[2]): # Select different element of nested tuple for sorting
     print(first_name, last_name, organization, dob)
+print()
+
+def by_last_name_first_name(person):
+    return person[1], person[0]
+
+for person in sorted(computer_people, key=by_last_name_first_name):
+    print(person)
+print()
+
+for person in sorted(computer_people, key=lambda p: (p[1], p[0])):
+    print(person)
+print()
+
+for person in sorted(computer_people, key=lambda p: p[-1], reverse=True):
+    print(person)
+print()
+
