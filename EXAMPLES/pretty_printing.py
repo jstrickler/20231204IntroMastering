@@ -23,3 +23,14 @@ print()
 print('With pprint (depth=2):')
 pprint(struct, depth=2)  # only print top two levels of structure
 print()
+print('-' * 60)
+
+d2 = {'m': 4, 'j': 19, 'a': 7}
+
+pprint(d2)
+print()
+
+pprint(d2, sort_dicts=False)
+print()
+
+
