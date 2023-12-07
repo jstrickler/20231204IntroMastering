@@ -1,4 +1,3 @@
-
 import re
 
 s = """lorem ipsum M-302 dolor sit amet, consectetur r-99 adipiscing elit, sed do
@@ -11,8 +10,9 @@ officia deserunt Y-45 mollit anim id est laborum"""
 
 pattern = r'([A-Z])-(\d{2,3})'  # parens delimit groups
 
+print("              Group 1")
 print("Group         start  end")
-print("0      1  2")
+print("0      1   2")
 print("-" * 25)
 
 for m in re.finditer(pattern, s):
@@ -22,3 +22,7 @@ print()
 
 matches = re.findall(pattern, s)  # findall() returns list of tuples containing groups
 print("matches:", matches)
+
+for letter, number in matches:
+    print(letter, number)
+    

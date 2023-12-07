@@ -15,9 +15,14 @@ class CardDeck:
                 card = Card(rank, suit)
                 self._cards.append(card)
 
+    @classmethod
+    def get_ranks(cls):
+        return cls.RANKS
+
+
     @property
     def cards(self):
-        return self._cards
+        return tuple(self._cards)
 
     def shuffle(self):
         random.shuffle(self._cards)
@@ -40,9 +45,7 @@ class CardDeck:
     
     #  == != gt lt ge le
     def __eq__(self, other):
-        self_cards = set(self.cards)
-        other_cards = set(other.cards)        
-        return self_cards == other_cards
+        return set(self._cards) == set(other.cards)
 
     #   __gt__  __lt__ 
 
@@ -57,12 +60,7 @@ if __name__ == "__main__":
     print(len(d1))
     print(d1)
     d3 = CardDeck()
-    print(f"d1 == d2: {d1 == d2}")
-    print(f"d2 == d3: {d2 == d3}")
-    print(f"len(d1): {len(d1)}")
-    print(f"len(d2): {len(d2)}")
-    print(f"len(d3): {len(d3)}")
-    
-    s2 = set(d2.cards)
-    s3 = set(d3.cards)
-    print(s2 == s3)
+    d2.shuffle()
+    d3.shuffle()
+    print(d1 == d2)
+    print(d2 == d3)

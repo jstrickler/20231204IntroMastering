@@ -1,0 +1,129 @@
+
+pet      "pet"  "I have a pet"   "Water the petunias"   "Don't track on the carpet"
+
+p.t      pet  pat p;t  p t    p,t  ptt      . matches anything but \n
+
+p..t    
+
+p[aeiou]t    pat pet pit pot petunias
+
+p[^aeiou]t   p t   p,t  ppt pXt pAt  
+
+p[0123456789]t 
+p[0-9]t
+
+p[a-z0-9]t 
+
+[0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9][0-9][0-9]
+
+[0-9][0-9][0-9]-[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]
+
+\d\d\d-\d\d-\d\d\d\d 
+
+\d [0-9]
+\D [^0-9]
+\s [ \t\n\r\f\b]
+\S [^ \t\n\r\f\b]
+\w [a-zA-Z0-9_]
+\W [^a-zA-Z0-9_]
+
+p\.t 
+p\[t
+
+p\\t  
+
+\d{3}-\d{2}-\d{4}
+
+Repeat Counts
+*
++
+?
+{x}
+{x,y}
+{x,}
+*?
++?
+
+pa*t    pt  pat  paaaaaaaaaaat 
+
+\s*\d\d\d\s*     "    234   "   
+
+\s+\d\d\d\s+  
+
+wombats?    
+
+\d{2}-[A-Z]{3,4}-\d{1}     42-NCU-5    88-BMNQ-9
+
+Anchors (restrict match to location)
+
+^spam    match at beginning    
+
+ham$     match end
+
+^\s*\d+\s*$
+
+^error
+
+
+"the wombat is going to bathe on the therapist's couch"
+
+\bthe\b 
+
+\biso  
+
+.*   match any number of any characters
+
+re.s  or re.DOTALL  -- . matches newline and everything else
+
+foo.*bar    match from first 'foo' to last 'bar'  (match longest)
+
+foo.*?bar   same, but match shortest
+
+"foo bar xxx foo bar yyy foo bar zzz foo bar"
+
+
+"Mary had a little lamb\nIts fleece was white as snow\n"
+
+^Its  no match
+
+^Its + re.M   matches!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

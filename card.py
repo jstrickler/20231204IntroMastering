@@ -1,3 +1,6 @@
+# from functools import total_ordering
+
+# @total_ordering
 class Card:  # inherits from 'object'
     VALID_SUITS = 'Clubs Diamonds Hearts Spades JOKER'.split()
 
@@ -33,6 +36,15 @@ class Card:  # inherits from 'object'
 
     def __repr__(self):  # representation of the code for the object
         return f"Card('{self.rank}', '{self.suit}')"
+
+    # def __eq__(self, other):
+    #     return (self.rank == other.rank) and (self.suit == other.suit)
+    
+    # def __gt__(self, other):
+    #     return True
+
+    def __hash__(self):
+        return 4
 
 if __name__ == "__main__":
     c1 = Card('3', 'Diamonds')
