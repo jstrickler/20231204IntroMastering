@@ -7,7 +7,7 @@ from datetime import datetime
 
 TIMESTAMP = datetime.now().ctime()  # get a time string for the current date/time
 
-SENDER = 'jstrick@mindspring.com'
+SENDER = 'jstrickler@gmail.com'
 RECIPIENTS = 'jstrickler@gmail.com,crgnc3@gmail.com'
 MESSAGE_SUBJECT = 'Python SMTP example'
 
@@ -23,7 +23,7 @@ HTML_BODY = """
 <body>
 <h1>Hello</h1>
 <h2>{}</h2>
-<h3>Testing email from Python</h3>
+<h3>Testing HTML email from Python</h3>
 <body>
 </html>
 """.format(TIMESTAMP)

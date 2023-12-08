@@ -5,14 +5,14 @@ from datetime import datetime
 
 TIMESTAMP = datetime.now().ctime()  # get a time string for the current date/time
 
-SENDER = 'jstrick@mindspring.com'
+SENDER = 'jstrickler@gmail.com'
 RECIPIENTS = ['jstrickler@gmail.com']
 MESSAGE_SUBJECT = 'Python SMTP example'
 
 MESSAGE_BODY = """
 Hello at {}.
 
-Testing email from Python
+Testing simple email from Python
 """.format(TIMESTAMP)
 
 SMTP_USER = 'pythonclass'
@@ -25,7 +25,7 @@ msg = EmailMessage()  # create empty email message
 msg.set_content(MESSAGE_BODY)  # add the message body
 msg['Subject'] = MESSAGE_SUBJECT  # add the message subject
 msg['from'] = SENDER  # add the sender address
-msg['to'] = RECIPIENTS  # add a list of recipients
+msg['TO'] = RECIPIENTS  # add a list of recipients
 
 try:
     smtp.send_message(msg)  # send the message

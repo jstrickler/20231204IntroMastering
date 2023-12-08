@@ -1,7 +1,7 @@
 #
 import shlex
 
-cmd = 'herp derp "fuzzy bear" "wanga tanga" pop'  # Command line with quoted whitespace
+cmd = '''herp derp  'jupyter lab'  "fuzzy bear" "wanga tanga" pop'''  # Command line with quoted whitespace
 
 print(cmd.split())  # Normal split does the wrong thing
 print()
